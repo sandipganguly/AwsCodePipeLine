@@ -12,6 +12,7 @@ phases:
       - echo Entered the install phase...
       - apt-get update -y
       - printenv
+      - echo "password is $LOGIN_PASSWORD"
     finally:
       - echo This always runs even if the update or install command fails 
   pre_build:
