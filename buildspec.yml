@@ -10,7 +10,6 @@ phases:
   install:
     commands:
       - echo Entered the install phase...
-      - apt-get update -y
       - printenv
       - echo "password is $LOGIN_PASSWORD"
     finally:
@@ -37,7 +36,6 @@ artifacts:
     artifact1:
       files:
         - "**/*.sh"
-      discard-paths: yes
     artifact2:
       files:
         - "**/*.yml"
