@@ -30,13 +30,15 @@ phases:
       - echo Entered the post_build phase...
 artifacts:
   files:
-    - "**/*"
+    - "**/*.sh"
+    - "**/*.yml"
   discard-paths: yes
   secondary-artifacts:
-    artifact1:
+    onlysh:
       files:
         - "**/*.sh"
-    artifact2:
+      discard-paths: yes
+    onlyyml:
       files:
         - "**/*.yml"
       discard-paths: yes
